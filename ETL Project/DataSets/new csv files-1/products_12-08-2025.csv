@@ -1,0 +1,21 @@
+product_id,name,category,price,updated_at
+1001,Laptop,Electronics,800,2025-11-20 04:47:05
+1002,Smartphone,Electronics,600,2025-11-20 04:47:05
+1003,Headphones,Electronics,150,2025-11-20 04:47:05
+1004,Keyboard,Accessories,40,2025-11-20 04:47:05
+1005,Mouse,Accessories,25,2025-11-20 04:47:05
+1006,Monitor,Electronics,200,2025-11-20 04:47:05
+1007,Tablet,Electronics,300,2025-11-20 04:47:05
+1008,Smartwatch,Wearables,180,2025-11-20 04:47:05
+1009,Speaker,Audio,120,2025-11-20 04:47:05
+1010,Router,Networking,90,2025-11-20 04:47:05
+1011,Printer,Office,250,2025-11-20 04:47:05
+1012,Webcam,Video,70,2025-11-20 04:47:05
+1013,Microphone,Audio,110,2025-11-20 04:47:05
+1014,SSD Drive,Storage,130,2025-11-20 04:47:05
+1015,Hard Drive,Storage,95,2025-11-20 04:47:05
+1016,Graphics Card,Hardware,500,2025-11-20 04:47:05
+1017,RAM Module,Hardware,80,2025-11-20 04:47:05
+1018,Power Supply,Hardware,60,2025-11-20 04:47:05
+1019,Motherboard,Hardware,220,2025-11-20 04:47:05
+1020,CPU Processor,Hardware,350,2025-11-20 04:47:05
