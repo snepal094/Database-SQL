@@ -27,11 +27,11 @@ SELECT * FROM departments;
 
 SELECT emp.department_id, dept.department_name,
 LISTAGG(
-    emp.firstname || ' ' || emp.lastname, ', '
+    emp.first_name || ' ' || emp.last_name, ', '
 )
-WITHIN GROUP (ORDER BY emp.DEPARTMENT_ID ASC) AS emp_names
-FROM employees00 emp
-JOIN departments dept
+WITHIN GROUP (ORDER BY HIRE_DATE ASC) AS emp_names
+FROM hr.employees emp
+JOIN hr.departments dept
 ON emp.department_id=dept.department_id
 GROUP BY emp.department_id, dept.department_name;
 
