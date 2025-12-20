@@ -37,7 +37,7 @@ SELECT * FROM TEMP_EMPLOYEES1;
 -- the row will stay for the session, even after commit.
 -- Data will disappear only when the session ends.
 
--- both deleta and preserve show no items here but in oracleDB, preserve and delete work as intended
+-- both delete and preserve show no items here but in oracleDB, preserve and delete work as intended
 
 -- Task: Use CTE from hr.employees and display first_name, salary, average salary and department 
 
