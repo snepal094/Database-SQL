@@ -30,11 +30,13 @@ INSERT INTO DIM_PRODUCTS (product_id, name, category, price, is_active, start_da
 SELECT s.product_id, s.name, s.category, s.price, 1 AS is_active, s.updated_at, NULL, GETDATE()
 FROM stg_products as s
 LEFT JOIN dim_products as t
-ON (s.product_id=t.product_id AND s.name=t.name AND s.category=t.category AND s.price=t.price AND is_active=1)
+ON (s.product_id=t.product_id AND s.name=t.name AND s.category=t.category AND s.price=t.price AND t.is_active=1)
 where t.product_id is NULL;
 -- any one condition failing on this ON condition causes the resulting table to have null values in dim_products (t)
 -- i.e. if the on condition fails, all fields from t become null
 -- so, where condition from t could have any column from t table, like t.name IS NULL or t.price IS NULL, etc.
+
+-- is_active=1 -> it is avoiding the case where the historical version had the same attributes as the upgraded version
 
 --When a JOIN fails in a LEFT JOIN, the row still appears,
 --but all columns from the second table in the resulting table become NULL.
