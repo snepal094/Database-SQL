@@ -39,7 +39,7 @@ CREATE TABLE stg_sales (
 -- If a customer buys multiple different products in the same transaction (same day), 
 -- there will be multiple rows with the same sale_id but different product_ids.
 
--- Each row is independent in the sense that it represents one product in the purchase, 
+-- Each row is independent in the sense that it represents one product (quantity can be more than 1) in the purchase, 
 -- but they are related through the sale_id.
 
 
