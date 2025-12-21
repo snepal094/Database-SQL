@@ -157,6 +157,22 @@ DELETE FROM hr_employees WHERE rowid NOT IN (
 --     WHERE rn > 1
 -- );
 
+-- rowid and window function
+
+-- DELETE FROM employees
+-- WHERE ROWID IN (
+--   SELECT rid
+--   FROM (
+--     SELECT ROWID AS rid,
+--            ROW_NUMBER() OVER (
+--              PARTITION BY first_name, last_name, email, hire_date
+--              ORDER BY employee_id
+--            ) AS rn
+--     FROM employees
+--   )
+--   WHERE rn > 1
+-- );
+
 
 -- ADVANCED
 
