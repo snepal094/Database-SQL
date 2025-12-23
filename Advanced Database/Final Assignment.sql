@@ -142,7 +142,7 @@ DELETE FROM hr_employees WHERE rowid NOT IN (
 -- other methods such as methods using window functions can be used, but only using a unique identifier like rowid or a primary key
 
 -- hypothetically, if there was a field called 'id' which was unique, the duplicates could be removed in the following way
--- assumption: no two dupliacates share the same id
+-- assumption: no two dupliacates share the same id (used rowid here)
 
 -- DELETE FROM hr_employees
 -- WHERE id IN (
@@ -155,22 +155,6 @@ DELETE FROM hr_employees WHERE rowid NOT IN (
 --         FROM hr_employees
 --     )
 --     WHERE rn > 1
--- );
-
--- rowid and window function
-
--- DELETE FROM employees
--- WHERE ROWID IN (
---   SELECT rid
---   FROM (
---     SELECT ROWID AS rid,
---            ROW_NUMBER() OVER (
---              PARTITION BY first_name, last_name, email, hire_date
---              ORDER BY employee_id
---            ) AS rn
---     FROM employees
---   )
---   WHERE rn > 1
 -- );
 
 
